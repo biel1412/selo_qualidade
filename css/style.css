@@ -182,7 +182,7 @@ code { background: #eef0f5; padding: 1px 5px; border-radius: 4px; font-size: 12.
 /* Listras */
 .lay-diagonal .content { left: 130px; right: 130px; }
 .lay-diagonal .title { font-weight: 800; letter-spacing: .06em; }
-.lay-diagonal .subtitle { width: auto; background: var(--accent); color: var(--primary); padding: 7px 18px; letter-spacing: .25em; font-size: 19px; font-family: 'Montserrat', sans-serif; font-weight: 800; }
+.lay-diagonal .subtitle { width: auto; background: var(--accent); color: var(--accent-text); padding: 7px 18px; letter-spacing: .25em; font-size: 19px; font-family: 'Montserrat', sans-serif; font-weight: 800; }
 .lay-diagonal .lead { font-style: normal; text-transform: uppercase; letter-spacing: .2em; font-size: 14px; font-weight: 600; margin-top: 30px; }
 .lay-diagonal .name { font-weight: 800; text-transform: uppercase; letter-spacing: .03em; }
 .lay-diagonal .name-rule { width: 100px; height: 5px; }

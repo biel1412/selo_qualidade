@@ -6,6 +6,7 @@ O site roda direto no **GitHub Pages**: é HTML, CSS e JavaScript, sem servidor,
 ## Funcionalidades
 
 - **24 modelos de certificado**, em 8 estilos: Clássico, Luxo, Moderno, Faixa, Geométrico, Ondas, Minimalista e Listras.
+  - Todos usam a paleta da marca: índigo `#170b60`, roxo `#393187`, magenta `#ca2d7e` e branco.
 - **Campos editáveis:** nome do inspetor, cargo, mensagem, título, subtítulo, empresa, setor e logotipo.
 - **Assinatura:** digitada (4 estilos de letra), desenhada com o dedo ou o mouse, ou enviada como imagem.
 - **12 mensagens padrão** prontas, e você pode salvar as suas.

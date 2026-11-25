@@ -5,7 +5,8 @@ O site roda direto no **GitHub Pages**: é HTML, CSS e JavaScript, sem servidor,
 
 ## Funcionalidades
 
-- **24 modelos de certificado**, em 8 estilos: Clássico, Luxo, Moderno, Faixa, Geométrico, Ondas, Minimalista e Listras.
+- **27 modelos de certificado**, em 9 estilos: Órbita, Clássico, Luxo, Moderno, Faixa, Geométrico, Ondas, Minimalista e Listras.
+  - 19 modelos (70%) usam a paleta da marca: índigo `#170b60`, roxo `#393187`, magenta `#ca2d7e` e branco.
 - **Campos editáveis:** nome do inspetor, cargo, mensagem, título, subtítulo, empresa, setor e logotipo.
 - **Assinatura:** digitada (4 estilos de letra), desenhada com o dedo ou o mouse, ou enviada como imagem.
 - **12 mensagens padrão** prontas, e você pode salvar as suas.
@@ -33,7 +34,7 @@ python3 -m http.server 8000
 ```
 index.html          página principal
 css/style.css       estilos da interface e dos certificados
-js/templates.js     os 24 modelos (cores, layouts, selo 100%)
+js/templates.js     os 27 modelos (cores, layouts, selo 100%)
 js/app.js           formulário, assinatura, mensagens e exportação
 js/vendor/          html2canvas e jsPDF (usados para gerar PNG/PDF)
 ```

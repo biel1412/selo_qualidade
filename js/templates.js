@@ -12,40 +12,44 @@
   const LAYOUTS = {
     classic:  { title: "'Cinzel', serif",           body: "'Cormorant Garamond', serif", name: "'Great Vibes', cursive",    titleSize: 64, nameSize: 82, msgSize: 23, sealText: 'accent' },
     luxe:     { title: "'Cinzel', serif",           body: "'Cormorant Garamond', serif", name: "'Great Vibes', cursive",    titleSize: 62, nameSize: 82, msgSize: 23, sealText: 'accent', dark: true },
-    modern:   { title: "'Montserrat', sans-serif",  body: "'Inter', sans-serif",         name: "'Montserrat', sans-serif",  titleSize: 60, nameSize: 56, msgSize: 18, sealText: 'white' },
+    modern:   { title: "'Montserrat', sans-serif",  body: "'Inter', sans-serif",         name: "'Montserrat', sans-serif",  titleSize: 60, nameSize: 56, msgSize: 18, sealText: 'white', bandSeal: true },
     ribbon:   { title: "'Playfair Display', serif", body: "'Cormorant Garamond', serif", name: "'Allura', cursive",         titleSize: 70, nameSize: 86, msgSize: 23, sealText: 'accent', tails: true },
     geo:      { title: "'Raleway', sans-serif",     body: "'Inter', sans-serif",         name: "'Raleway', sans-serif",     titleSize: 60, nameSize: 56, msgSize: 18, sealText: 'white' },
     wave:     { title: "'Playfair Display', serif", body: "'Inter', sans-serif",         name: "'Dancing Script', cursive", titleSize: 66, nameSize: 70, msgSize: 18, sealText: 'white' },
     minimal:  { title: "'Playfair Display', serif", body: "'Inter', sans-serif",         name: "'Playfair Display', serif", titleSize: 58, nameSize: 60, msgSize: 17, sealText: 'primary' },
+    orbita:   { title: "'Montserrat', sans-serif",  body: "'Inter', sans-serif",         name: "'Montserrat', sans-serif",  titleSize: 60, nameSize: 54, msgSize: 18, sealText: 'white', bandSeal: true },
     diagonal: { title: "'Montserrat', sans-serif",  body: "'Inter', sans-serif",         name: "'Montserrat', sans-serif",  titleSize: 58, nameSize: 50, msgSize: 18, sealText: 'white' }
   };
 
-  /* ---------- Modelos (24) ---------- */
+  /* ---------- Modelos (27) ---------- */
   const RAW = [
+    ['orbita-indigo',      'Órbita Índigo',        'orbita',   { bg: '#ffffff', primary: '#170b60', ring: '#393187', half: '#ca2d7e', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894', titleColor: '#170b60', nameColor: '#ca2d7e' }],
+    ['orbita-magenta',     'Órbita Magenta',       'orbita',   { bg: '#ffffff', primary: '#ca2d7e', ring: '#e45a9c', half: '#170b60', accent: '#170b60', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894', titleColor: '#170b60', nameColor: '#393187' }],
+    ['orbita-violeta',     'Órbita Violeta',       'orbita',   { bg: '#f6f4fc', primary: '#393187', ring: '#5a52a8', half: '#ca2d7e', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#1e1650', muted: '#6b6894', titleColor: '#170b60', nameColor: '#ca2d7e' }],
     ['classico-dourado',   'Clássico Dourado',     'classic',  { bg: '#fffdf6', primary: '#1f2a44', accent: '#c9a227', accentText: '#9a7716', text: '#1f2a44', muted: '#5b6478' }],
-    ['classico-bordo',     'Clássico Bordô',       'classic',  { bg: '#fffaf5', primary: '#6d1a2a', accent: '#c49a45', accentText: '#8f6a22', text: '#3a1d22', muted: '#7a5a5f' }],
-    ['classico-esmeralda', 'Clássico Esmeralda',   'classic',  { bg: '#f8fbf7', primary: '#0f4d3a', accent: '#b8963e', accentText: '#86691f', text: '#173b30', muted: '#5c7068' }],
+    ['classico-indigo',    'Clássico Índigo',      'classic',  { bg: '#fbfaff', primary: '#170b60', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894' }],
+    ['classico-violeta',   'Clássico Violeta',     'classic',  { bg: '#f6f4fc', primary: '#393187', accent: '#ca2d7e', accentText: '#a51f63', text: '#1e1650', muted: '#6b6894' }],
     ['luxo-noturno',       'Luxo Noturno',         'luxe',     { bg: '#121826', primary: '#0b1020', accent: '#d4af37', accentText: '#d4af37', text: '#f3ead2', muted: '#b9b2a0' }],
-    ['luxo-grafite',       'Luxo Grafite Prata',   'luxe',     { bg: '#1c1c1e', primary: '#111113', accent: '#c8c8c8', accentText: '#e5e5e5', text: '#f2f2f2', muted: '#a1a1a6' }],
-    ['luxo-vinho',         'Luxo Vinho',           'luxe',     { bg: '#2a0f17', primary: '#1a0910', accent: '#e0b973', accentText: '#e0b973', text: '#f7e9d7', muted: '#c9b29f' }],
+    ['luxo-indigo',        'Luxo Índigo Magenta',  'luxe',     { bg: '#170b60', primary: '#0f0745', accent: '#ca2d7e', accentText: '#e86aa9', text: '#ffffff', muted: '#b8b3e0', titleColor: '#ffffff', nameColor: '#e86aa9' }],
+    ['luxo-roxo',          'Luxo Roxo',            'luxe',     { bg: '#393187', primary: '#170b60', accent: '#f3c1dc', accentText: '#f3c1dc', text: '#ffffff', muted: '#cfcaf0', titleColor: '#ffffff', nameColor: '#f3c1dc' }],
     ['moderno-azul',       'Moderno Azul',         'modern',   { bg: '#ffffff', primary: '#1e40af', accent: '#f59e0b', accentText: '#b45309', text: '#0f172a', muted: '#64748b' }],
-    ['moderno-verde',      'Moderno Verde',        'modern',   { bg: '#ffffff', primary: '#047857', accent: '#fbbf24', accentText: '#a16207', text: '#0f172a', muted: '#64748b' }],
-    ['moderno-roxo',       'Moderno Roxo',         'modern',   { bg: '#ffffff', primary: '#5b21b6', accent: '#f472b6', accentText: '#be185d', text: '#1e1b4b', muted: '#6b7280' }],
+    ['moderno-indigo',     'Moderno Índigo',       'modern',   { bg: '#ffffff', primary: '#170b60', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894' }],
+    ['moderno-magenta',    'Moderno Magenta',      'modern',   { bg: '#ffffff', primary: '#ca2d7e', accent: '#170b60', accentText: '#393187', text: '#170b60', muted: '#6b6894', titleColor: '#170b60', nameColor: '#ca2d7e' }],
     ['faixa-real',         'Faixa Real',           'ribbon',   { bg: '#fdfcf8', primary: '#1e3a8a', accent: '#d4a017', accentText: '#a07a0c', text: '#1e293b', muted: '#64748b' }],
-    ['faixa-rubi',         'Faixa Rubi',           'ribbon',   { bg: '#fffbfa', primary: '#9f1239', accent: '#e5c07b', accentText: '#a8741f', text: '#3b0d1a', muted: '#7c5a62' }],
-    ['faixa-petroleo',     'Faixa Petróleo',       'ribbon',   { bg: '#f9fbfb', primary: '#134e4a', accent: '#f0b429', accentText: '#a87a06', text: '#0f2e2c', muted: '#5f7472' }],
+    ['faixa-indigo',       'Faixa Índigo',         'ribbon',   { bg: '#fbfaff', primary: '#170b60', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894' }],
+    ['faixa-violeta',      'Faixa Violeta',        'ribbon',   { bg: '#ffffff', primary: '#393187', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#1e1650', muted: '#6b6894' }],
     ['geo-laranja',        'Geométrico Laranja',   'geo',      { bg: '#ffffff', primary: '#ea580c', accent: '#1e293b', accentText: '#c2410c', text: '#1e293b', muted: '#64748b', titleColor: '#1e293b', nameColor: '#c2410c' }],
-    ['geo-turquesa',       'Geométrico Turquesa',  'geo',      { bg: '#ffffff', primary: '#0891b2', accent: '#164e63', accentText: '#0e7490', text: '#0f2a33', muted: '#5b7480', titleColor: '#164e63', nameColor: '#0e7490' }],
-    ['geo-coral',          'Geométrico Coral',     'geo',      { bg: '#ffffff', primary: '#e11d48', accent: '#312e81', accentText: '#be123c', text: '#1e1b4b', muted: '#6b7280', titleColor: '#312e81', nameColor: '#be123c' }],
+    ['geo-indigo',         'Geométrico Índigo',    'geo',      { bg: '#ffffff', primary: '#ca2d7e', accent: '#170b60', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894', titleColor: '#170b60', nameColor: '#ca2d7e' }],
+    ['geo-violeta',        'Geométrico Violeta',   'geo',      { bg: '#ffffff', primary: '#393187', accent: '#170b60', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894', titleColor: '#170b60', nameColor: '#393187' }],
     ['ondas-oceano',       'Ondas Oceano',         'wave',     { bg: '#ffffff', primary: '#0369a1', accent: '#38bdf8', accentText: '#0369a1', text: '#0c2a3e', muted: '#5b7283' }],
-    ['ondas-por-do-sol',   'Ondas Pôr do Sol',     'wave',     { bg: '#fffaf5', primary: '#c2410c', accent: '#fb923c', accentText: '#c2410c', text: '#3b1d0e', muted: '#7c5d4c' }],
-    ['ondas-floresta',     'Ondas Floresta',       'wave',     { bg: '#fafdf9', primary: '#166534', accent: '#86efac', accentText: '#15803d', text: '#12301d', muted: '#5d7465' }],
+    ['ondas-indigo',       'Ondas Índigo',         'wave',     { bg: '#ffffff', primary: '#170b60', accent: '#393187', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894' }],
+    ['ondas-magenta',      'Ondas Magenta',        'wave',     { bg: '#fffafd', primary: '#393187', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894' }],
     ['minimal-preto',      'Minimalista Preto',    'minimal',  { bg: '#ffffff', primary: '#111111', accent: '#111111', accentText: '#111111', text: '#111111', muted: '#6b7280' }],
-    ['minimal-azul',       'Minimalista Azul',     'minimal',  { bg: '#ffffff', primary: '#1d4ed8', accent: '#1d4ed8', accentText: '#1d4ed8', text: '#0f172a', muted: '#64748b' }],
-    ['minimal-areia',      'Minimalista Areia',    'minimal',  { bg: '#f7f1e6', primary: '#5c4a32', accent: '#b08d57', accentText: '#8a6a3a', text: '#3d3122', muted: '#7d6c58' }],
+    ['minimal-indigo',     'Minimalista Índigo',   'minimal',  { bg: '#ffffff', primary: '#170b60', accent: '#ca2d7e', accentText: '#ca2d7e', text: '#170b60', muted: '#6b6894' }],
+    ['minimal-lavanda',    'Minimalista Lavanda',  'minimal',  { bg: '#f6f4fc', primary: '#393187', accent: '#ca2d7e', accentText: '#393187', text: '#1e1650', muted: '#6b6894' }],
     ['listras-industrial', 'Listras Industrial',   'diagonal', { bg: '#ffffff', primary: '#1f2937', accent: '#facc15', accentText: '#1f2937', text: '#111827', muted: '#6b7280' }],
-    ['listras-marinho',    'Listras Marinho',      'diagonal', { bg: '#ffffff', primary: '#0c4a6e', accent: '#38bdf8', accentText: '#0c4a6e', text: '#0b2537', muted: '#5b7283' }],
-    ['listras-grena',      'Listras Grená',        'diagonal', { bg: '#fffdfa', primary: '#7f1d1d', accent: '#f59e0b', accentText: '#7f1d1d', text: '#2d0f0f', muted: '#7a5c5c' }]
+    ['listras-indigo',     'Listras Índigo',       'diagonal', { bg: '#ffffff', primary: '#170b60', accent: '#ca2d7e', accentText: '#ffffff', text: '#170b60', muted: '#6b6894' }],
+    ['listras-violeta',    'Listras Violeta',      'diagonal', { bg: '#fbfaff', primary: '#393187', accent: '#ca2d7e', accentText: '#ffffff', text: '#1e1650', muted: '#6b6894' }]
   ];
 
   const TEMPLATES = RAW.map(([id, nome, layout, c]) => {
@@ -55,7 +59,7 @@
     t.nameColor = c.nameColor || (L.dark ? c.accent : c.primary);
     const sealText = L.sealText === 'accent' ? c.accent : L.sealText === 'primary' ? c.primary : '#ffffff';
     t.seal = {
-      star: layout === 'minimal' ? c.primary : c.accent,
+      star: layout === 'minimal' ? c.primary : layout === 'orbita' ? c.half : c.accent,
       center: layout === 'minimal' ? c.bg : c.primary,
       text: sealText
     };
@@ -155,6 +159,14 @@ ${dots}`;
       return `<rect x="34" y="34" width="1055" height="726" fill="none" stroke="${t.primary}" stroke-opacity="0.5" stroke-width="1"/>
 ${L(52, 52, 1, 1)}${L(1071, 52, -1, 1)}${L(52, 742, 1, -1)}${L(1071, 742, -1, -1)}`;
     },
+    orbita(t) {
+      return `<rect x="0" y="0" width="250" height="794" fill="${t.primary}"/>
+<path d="M250,177 A220,220 0 0,0 250,617 Z" fill="${t.ring}"/>
+<path d="M250,287 A110,110 0 0,0 250,507 Z" fill="${t.primary}"/>
+<path d="M250,287 A110,110 0 0,1 250,507 Z" fill="${t.half}"/>
+<rect x="250" y="776" width="873" height="18" fill="${t.primary}"/>
+<rect x="250" y="770" width="873" height="6" fill="${t.half}"/>`;
+    },
     diagonal(t) {
       let s = '';
       for (let i = 0; i < 6; i++) {
@@ -177,11 +189,12 @@ ${L(52, 52, 1, 1)}${L(1071, 52, -1, 1)}${L(52, 742, 1, -1)}${L(1071, 742, -1, -1
       `--title-size:${t.titleSize}px`, `--name-size:${t.nameSize}px`, `--msg-size:${t.msgSize}px`,
       `--sig-color:${d.sigColor}`
     ].join(';');
-    const isModern = t.layout === 'modern';
+    const isModern = t.layout === 'modern', bandSeal = !!t.bandSeal;
     const company = [d.empresa, d.setor].filter(Boolean).map(esc).join(' &nbsp;·&nbsp; ');
     return `<div class="cert lay-${t.layout}" style="${vars}">
 <svg class="deco" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}">${DECO[t.layout](t)}</svg>
-${isModern ? `<div class="band-seal">${seal(t, false)}</div><div class="band-label"><div>Excelência</div><div class="band-month">${esc(d.periodo)}</div></div>` : ''}
+${bandSeal ? `<div class="band-seal">${seal(t, false)}</div>` : ''}
+${isModern ? `<div class="band-label"><div>Excelência</div><div class="band-month">${esc(d.periodo)}</div></div>` : ''}
 <div class="content">
   ${d.logo ? `<img class="logo" src="${d.logo}" alt="">` : ''}
   ${company ? `<div class="company">${company}</div>` : ''}
@@ -194,7 +207,7 @@ ${isModern ? `<div class="band-seal">${seal(t, false)}</div><div class="band-lab
   <p class="message">${d.mensagemHTML}</p>
   <div class="footer">
     <div class="sig">${d.sigHTML}<div class="sig-line">${esc(d.inspetor) || '&nbsp;'}</div><div class="sig-role">${esc(d.cargo) || '&nbsp;'}</div></div>
-    ${isModern ? '' : `<div class="seal">${seal(t, !!t.tails)}</div>`}
+    ${bandSeal ? '' : `<div class="seal">${seal(t, !!t.tails)}</div>`}
     <div class="datebox"><div class="date-val">${esc(d.periodo)}</div><div class="sig-line">${esc(d.dataLabel)}</div><div class="sig-role">&nbsp;</div></div>
   </div>
 </div>
